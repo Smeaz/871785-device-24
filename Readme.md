@@ -2,6 +2,7 @@
 
 * Студент: [Павел Прилипов](https://up.htmlacademy.ru/htmlcss/24/user/871785).
 * Наставник: `Неизвестно`.
+* Наставник: [Роман Марченко](https://htmlacademy.ru/profile/id505487).
 
 ---
 
