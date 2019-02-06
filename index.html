@@ -11,13 +11,25 @@
           <img class="logo" src="img/logo-device.svg" height="35" width="163" alt="Логотип интернет-магазина гаджетов «DEVICE">
         </a>
         <ul class="header user-navigation">
-        	<li class="search"><!-- Здесь будет форма --></li>
-          	<li class="header login-link">Войти</li>
+        	<li class="header search"><form action="https://echo.htmlacademy.ru">
+        		<input type="search" name="search" id="search" placeholder="Поиск по сайту">
+        		<input type="submit" value="">
+        	</form></li>
+          	<li class="header login-link"><a class="login-link" href="#">Войти</a></li>
           	<li class="header compare-link"><a href="compare.html">Сравнить</a></li>
           	<li class="header cart-link"><a href="cart.html">Корзина</a></li>
         </ul>
         <ul class="header site-navigation">
-          <li><a href="catalog.html">Каталог товаров</a></li>
+          <li><a href="catalog.html">Каталог товаров</a>
+			<ul>
+				<li><a href="#">Виртуальная реальность</a></li>
+				<li><a href="#">Моноподы для селфи</a></li>
+				<li><a href="#">Экшн-камеры</a></li>
+				<li><a href="#">Фитнес-браслеты</a></li>
+				<li><a href="#">Умные часы</a></li>
+				<li><a href="#">Квадрокоптеры</a></li>
+			</ul>
+          </li>
           <li><a href="delivery.html">Доставка</a></li>
           <li><a href="guarantee.html">Гарантия</a></li>
           <li><a href="contacts.html">Контакты</a></li>
@@ -41,8 +53,8 @@
   	<section class="contacts">
   		<h2>Контакты</h2>
   		<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает</p>
-  		<div class="map"><img src="img/map.jpg" height="222" width="560"></div>
-  		<a class="button" href="#">Напишите нам</a>
+  		<div class="map"><img src="img/map.jpg" height="222" width="560" alt="Магазин находится по адресу ул. Строителей, 15, Москва"></div>
+  		<button class="button">Напишите нам</button>
   	</section>
   </main>
   <footer class="main-footer">
@@ -51,7 +63,7 @@
           <img  class="logo" src="img/logo-device.svg" height="35" width="163" alt="Логотип интернет-магазина гаджетов «DEVICE»">
         </a>
         <ul class="footer user-navigation">
-          	<li class="footer login-link">Войти</li>
+          	<li class="footer login-link"><a class="login-link" href="#">Войти</a></li>
           	<li class="footer compare-link"><a href="compare.html">Сравнить</a></li>
             <li class="footer basket-link"><a href="basket.html">Корзина</a></li>
         </ul>
@@ -74,5 +86,58 @@
       	<a class="academy-button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
       </p>
   </footer>
+  <section class="modal modal-login">
+  	        <h2>Личный кабинет</h2>
+        <p>Введите свой логин и пароль.</p>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="visually-hidden" for="user-login">Логин</label>
+            <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+          </p>
+          <p>
+            <label class="visually-hidden" for="user-password">Пароль</label>
+            <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+          </p>
+          <p class="login-password-info">
+            <label class="login-checkbox">
+              <input type="checkbox" name="remember">
+              Запомнить
+            </label>
+            <a class="restore" href="#">Забыли пароль?</a>
+          </p>
+          <button class="button" type="submit">
+            Войти
+          </button>
+        </form>
+        <button class="modal-close" type="button">
+          Закрыть
+        </button>
+  </section>
+  <section class="modal modal-write-us">
+  	<h2 class="visually-hidden">Напишите нам</h2>
+  	<form class="writeus-form" action="https://echo.htmlacademy.ru" method="post">
+  		<p><label for="writeus-name">Ваше имя:</label><br>
+  		<input id="writeus-name" type="text" name="name" value="" placeholder="Имя Фамилия"></p>
+  		<p><label for="writeus-email">Ваш e-mail:</label><br>
+  		<input id="writeus-email" type="email" name="email" value="" placeholder="email@example.com"></p>
+  		<p><label for="writeus-text">Текст письма:</label><br>
+  		<textarea id="writeus-text" type="text" name="text" rows="4" placeholder="В свободной форме"></textarea></p>
+  		<input class="button" type="submit" value="Отправить">
+  	</form>
+  		<button class="modal-close" type="button">
+          Закрыть
+        </button>
+  </section>
+        <section class="modal modal-map">
+        <h2 class="visually-hidden">
+          Как до нас добраться
+        </h2>
+        <p>
+          <img src="img/map-big.jpg" width="960" height="559" alt="Магазин находится по адресу ул. Строителей, 15, Москва">
+        </p>
+        <button class="modal-close" type="button">
+          Закрыть
+        </button>
+      </section>
   </body>
 </html>

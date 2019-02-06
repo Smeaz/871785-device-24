@@ -11,13 +11,25 @@
           <img class="logo" src="img/logo-device.svg" height="35" width="163" alt="Логотип интернет-магазина гаджетов «DEVICE">
         </a>
         <ul class="header user-navigation">
-        	<li class="search"><!-- Здесь будет форма --></li>
-          	<li class="header login-link"><a class="current-user">Валентин Петухов</a>Выйти</li>
+        	<li class="header search"><form action="https://echo.htmlacademy.ru">
+            <input type="search" name="search" id="search" placeholder="Поиск по сайту">
+            <input type="submit" value="">
+          </form></li>
+          	<li class="header login-link"><a class="current-user" href="#">Валентин Петухов</a><button class="leave">Выйти</button></li>
             <li class="header compare-link"><a href="compare.html">Сравнить</a></li>
             <li class="header cart-link"><a href="cart.html">Корзина</a></li>
         </ul>
         <ul class="header site-navigation">
-          <li><a href="catalog.html">Каталог товаров</a></li>
+          <li><a href="catalog.html">Каталог товаров</a>
+      <ul>
+        <li><a href="#">Виртуальная реальность</a></li>
+        <li><a href="#">Моноподы для селфи</a></li>
+        <li><a href="#">Экшн-камеры</a></li>
+        <li><a href="#">Фитнес-браслеты</a></li>
+        <li><a href="#">Умные часы</a></li>
+        <li><a href="#">Квадрокоптеры</a></li>
+      </ul>
+          </li>
           <li><a href="delivery.html">Доставка</a></li>
           <li><a href="guarantee.html">Гарантия</a></li>
           <li><a href="contacts.html">Контакты</a></li>
@@ -35,7 +47,47 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <!-- Красная зона -->
-        <!-- Здесь будет форма -->
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Цвет</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="product-color" value="black" id="color-black" checked>
+                <label for="color-black">Черный</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="product-color" value="white" id="color-white">
+                <label for="color-white">Белый</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="product-color" value="blue" id="color-blue" checked>
+                <label for="color-blue">Синий</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="product-color" value="red" id="color-red" checked>
+                <label for="color-red">Красный</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="product-color" value="pink" id="color-pink">
+                <label for="color-pink">Розовый</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Bluetooth</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-bluetooth" value="Yes" id="bluetooth-yes" checked>
+                <label for="bluetooth-yes">Есть</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-bluetooth" value="No" id="bluetooth-no">
+                <label for="bluetooth-no">Нет</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="filter-button button">Показать</button>
+        </form>
       </section>
       <section class="catalog">
         <h2 class="visually-hidden">Список моноподов для селфи</h2>
@@ -48,7 +100,7 @@
                 <img class="catalog-item" src="img/item-1.jpg" height="380" width="360" alt="Любительская селфи-палка">
             </p>
             <p class="catalog-item-price">500 руб.</p>
-            <p class="catalog-item-new">NEW</p>
+            <p class="catalog-item-new visually-hidden">NEW</p>
           </li>
           <li class="catalog-item">
             <h3>
@@ -58,7 +110,7 @@
                 <img class="catalog-item" src="img/item-2.jpg" height="380" width="360" alt="Профессиональная селфи-палка">
             </p>
             <p class="catalog-item-price">1 500 руб.</p>
-            <p class="catalog-item-new">NEW</p>
+            <p class="catalog-item-new visually-hidden">NEW</p>
           </li>
           <li class="catalog-item">
             <h3>
@@ -68,7 +120,7 @@
                 <img class="catalog-item" src="img/item-3.jpg" height="380" width="360" alt="Непотопляемая селфи-палка">
             </p>
             <p class="catalog-item-price">2 500 руб.</p>
-            <p class="catalog-item-new">NEW</p>
+            <p class="catalog-item-new visually-hidden">NEW</p>
           </li>
           <li class="catalog-item">
             <h3>
@@ -90,7 +142,7 @@
           <img class="logo" src="img/logo-device.svg" height="35" width="163" alt="Логотип интернет-магазина гаджетов «DEVICE">
         </a>
         <ul class="footer user-navigation">
-            <li class="footer login-link"><a class="current-user">Валентин Петухов</a>Выйти</li>
+            <li class="footer login-link"><a class="current-user" href="#">Валентин Петухов</a><button class="leave">Выйти</button></li>
             <li class="footer compare-link"><a href="compare.html">Сравнить</a></li>
             <li class="footer basket-link"><a href="basket.html">Корзина</a></li>
         </ul>
