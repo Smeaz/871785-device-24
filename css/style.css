@@ -5,7 +5,6 @@ body {
 	font-family: "Open Sans", Arial, sans-serif;
 	font-size: 15px;
 	line-height: 30px;
-	letter-spacing: 0.15px;
 	font-weight: 300;
 	color: #464646;
 
@@ -16,12 +15,8 @@ a {
 	text-decoration: none;
 }
 
-.header-logo {
-	fill: #ffc600;
-}
-
-.header-logo:hover,
-.footer-logo:hover {
+.main-header-logo:hover,
+.main-footer-logo:hover {
 	opacity: 0.6;
 }
 
@@ -37,6 +32,7 @@ a {
 
 .site-navigation > li > a {
 	font-family: "Gilroy ExtraBold", Arial, sans-serif;
+	font-size: 18px;
 	letter-spacing: 3.6px;
 	text-transform: uppercase;
 }
@@ -44,22 +40,17 @@ a {
 .site-navigation,
 .catalog-menu,
 .user-navigation {
-  list-style: none;
+	list-style: none;
 }
 
 .main-navigation > .site-navigation a,
 .main-navigation > .user-navigation a {
-  color: #000000;
+	color: #000000;
 }
 
 .site-navigation a:hover,
-.user-navigation a:hover {
-  opacity: 0.6;
-}
-
-.site-navigation a:focus,
-.user-navigation a:focus {
-  opacity: 0.3;
+.main-navigation > .user-navigation a:hover {
+	opacity: 0.6;
 }
 
 .search input {
@@ -73,7 +64,7 @@ a {
 }
 
 .search input:focus {
-	color: rgb(0, 0, 0);
+	color: rgba(0, 0, 0, 1);
 	border-bottom: 2px solid black;
 }
 
@@ -93,7 +84,17 @@ a {
 	color: rgba(255, 255, 255, 0.3);
 }
 
+.header .leave-btn {
+	color: rgba(0, 0, 0, 0.3);
+	background-color: transparent;
+	border: none;
+}
 
+.footer .leave-btn {
+	color: rgba(255, 255, 255, 0.3);
+	background-color: transparent;
+	border: none;
+}
 
 .delivery-companies {
 	list-style: none;
@@ -106,7 +107,6 @@ a {
 .contacts h2 {
 	font-family: "Gilroy ExtraBold", Arial, sans-serif;
 	font-size: 47px;
-	letter-spacing: 0.47px;
 	color: #000000;
 }
 
@@ -126,8 +126,8 @@ a {
 
 .button:focus,
 .button:active {
-  background-color: #000000;
-  color: #f7e184;
+	background-color: #000000;
+	color: #f7e184;
 }
 
 .writeus-item input,
@@ -170,9 +170,160 @@ a {
 
 .footer-navigation > .site-navigation a,
 .footer-navigation > .user-navigation a {
-  color: #ffffff;
+	color: #ffffff;
+}
+
+.footer-navigation > .user-navigation a {
+	opacity: 0.7;
+}
+
+.footer-navigation > .user-navigation a:hover {
+	opacity: 1;
+}
+
+.site-navigation a:focus,
+.user-navigation a:focus {
+	opacity: 0.3;
+}
+
+.footer-social {
+	text-align: center;
+}
+
+.footer-social ul {
+	list-style: none;
+}
+
+.social-button {
+	color: #ffffff;
+}
+
+.footer-copyright {
+	text-align: center;
+}
+
+.academy-button {
+	color: #ffffff;
 }
 
 .bigmap {
 	box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+}
+
+.modal {
+	background-color: #ffffff;
+}
+
+.modal h2 {
+	font-family: "Gilroy ExtraBold", Arial, sans-serif;
+	font-size: 47px;
+	color: #000000;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  	font: inherit;
+  	font-weight: 400;
+  	background-color: #F2F2F2;
+	border: 3px solid transparent;
+	color: #707070;
+}
+
+.login-form input:hover {
+	background-color: #eaeaea;
+}
+
+.login-form input:focus {
+	background-color: transparent;
+	border: 3px solid #f7e296;
+	color: #464646;
+}
+
+.login-checkbox:hover,
+.login-checkbox:focus {
+	opacity: 0.6;
+}
+
+.restore {
+	color: #000000;
+	opacity: 0.6;
+	text-decoration: underline;
+}
+
+.restore:hover,
+.restore:focus {
+	opacity: 1;
+	text-decoration: none;
+}
+
+.page-title {
+	font-family: "Gilroy ExtraBold", Arial, sans-serif;
+	font-size: 47px;
+	color: #000000;
+}
+
+.breadcrumbs {
+	list-style: none;
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 0.1px;
+}
+
+.breadcrumbs a,
+.breadcrumbs-current {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs a:hover {
+	color: rgba(0, 0, 0, 0.6)
+}
+
+.breadcrumbs a:focus {
+	color: rgba(0, 0, 0, 0.1)
+}
+
+.filter {
+	background-color: #ebebeb;
+}
+
+.filter fieldset {
+	border: none;
+}
+
+.filter legend {
+	font-family: "Gilroy ExtraBold", Arial, sans-serif;
+	font-size: 18px;
+}
+
+.filter ul {
+	list-style: none;
+	line-height: 40px;
+	color: #000000;
+	letter-spacing: 0.1px;
+}
+
+.filter-input:hover + label,
+.filter-input:focus + label {
+	color: #000000;
+}
+
+.filter-input:disabled + label {
+	color: #a6a6a6;
+}
+
+.catalog-list {
+	list-style: none;
+}
+
+
+
+.catalog-item a {
+	font-family: "Gilroy ExtraBold", Arial, sans-serif;
+	font-size: 18px;
+	color: #000000;
+}
+
+.catalog-item-price {
+	font-family: "Gilroy-Light", Arial, sans-serif;
+	font-size: 16px;
 }
