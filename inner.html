@@ -3,6 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
+    <style>
+      @font-face {
+        font-family: "Gilroy-Light";
+        src: url(font/gilroylight.woff2) format(woff2),
+        url(font/gilroylight.woff) format(woff);
+      }
+      @font-face {
+        font-family: "Gilroy-ExtraBold";
+        src: url(font/gilroyextrabold.woff2) format(woff2),
+        url(font/gilroyextrabold.woff) format(woff);
+      }
+    </style>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
   	<header class="main-header">
@@ -21,14 +36,14 @@
         </ul>
         <ul class="header site-navigation">
           <li><a href="catalog.html">Каталог товаров</a>
-      <ul>
-        <li><a href="#">Виртуальная реальность</a></li>
-        <li><a href="#">Моноподы для селфи</a></li>
-        <li><a href="#">Экшн-камеры</a></li>
-        <li><a href="#">Фитнес-браслеты</a></li>
-        <li><a href="#">Умные часы</a></li>
-        <li><a href="#">Квадрокоптеры</a></li>
-      </ul>
+            <ul class="catalog-menu">
+              <li><a href="#">Виртуальная реальность</a></li>
+              <li><a href="#">Моноподы для селфи</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
+              <li><a href="#">Фитнес-браслеты</a></li>
+              <li><a href="#">Умные часы</a></li>
+              <li><a href="#">Квадрокоптеры</a></li>
+            </ul>
           </li>
           <li><a href="delivery.html">Доставка</a></li>
           <li><a href="guarantee.html">Гарантия</a></li>
@@ -138,7 +153,7 @@
   </main>
     <footer class="main-footer">
     <nav class="footer-navigation">
-      <a class="main-footer-logo">
+      <a href="index.html" class="main-footer-logo">
           <img class="logo" src="img/logo-device.svg" height="35" width="163" alt="Логотип интернет-магазина гаджетов «DEVICE">
         </a>
         <ul class="footer user-navigation">

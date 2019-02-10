@@ -3,17 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
+    <style>
+      @font-face {
+        font-family: "Gilroy-Light";
+        src: url(font/gilroylight.woff2) format(woff2),
+        url(font/gilroylight.woff) format(woff);
+      }
+      @font-face {
+        font-family: "Gilroy-ExtraBold";
+        src: url(font/gilroyextrabold.woff2) format(woff2),
+        url(font/gilroyextrabold.woff) format(woff);
+      }
+    </style>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
   	<header class="main-header">
   		<nav class="main-navigation">
-        <a class="main-header-logo">
-          <img class="logo" src="img/logo-device.svg" height="35" width="163" alt="Логотип интернет-магазина гаджетов «DEVICE">
+        <a class="main-header-logo" href="index.html">
+          <img class="header-logo" src="img/logo-device.svg" height="35" width="163" alt="Логотип интернет-магазина гаджетов «DEVICE">
         </a>
         <ul class="header user-navigation">
         	<li class="header search"><form action="https://echo.htmlacademy.ru">
         		<input type="search" name="search" id="search" placeholder="Поиск по сайту">
-        		<button class="search-btn"><span class="visually-hidden">Найти</span></button>
+        		<button class="search-btn">Найти</button>
         	</form></li>
           	<li class="header login-link"><a class="login-link" href="#">Войти</a></li>
           	<li class="header compare-link"><a href="compare.html">Сравнить</a></li>
@@ -21,7 +36,7 @@
         </ul>
         <ul class="header site-navigation">
           <li><a href="catalog.html">Каталог товаров</a>
-			<ul>
+			<ul class="catalog-menu">
 				<li><a href="#">Виртуальная реальность</a></li>
 				<li><a href="#">Моноподы для селфи</a></li>
 				<li><a href="#">Экшн-камеры</a></li>
@@ -59,8 +74,8 @@
   </main>
   <footer class="main-footer">
   	<nav class="footer-navigation">
-  		<a class="main-footer-logo">
-          <img  class="logo" src="img/logo-device.svg" height="35" width="163" alt="Логотип интернет-магазина гаджетов «DEVICE»">
+  		<a class="main-footer-logo" href="index.html">
+          <img  class="footer-logo" src="img/logo-device.svg" height="35" width="163" alt="Логотип интернет-магазина гаджетов «DEVICE»">
         </a>
         <ul class="footer user-navigation">
           	<li class="footer login-link"><a class="login-link" href="#">Войти</a></li>
@@ -116,13 +131,13 @@
   <section class="modal modal-write-us">
   	<h2 class="visually-hidden">Напишите нам</h2>
   	<form class="writeus-form" action="https://echo.htmlacademy.ru" method="post">
-  		<p><label for="writeus-name">Ваше имя:</label><br>
-  		<input id="writeus-name" type="text" name="name" value="" placeholder="Имя Фамилия"></p>
-  		<p><label for="writeus-email">Ваш e-mail:</label><br>
-  		<input id="writeus-email" type="email" name="email" value="" placeholder="email@example.com"></p>
-  		<p><label for="writeus-text">Текст письма:</label><br>
-  		<textarea id="writeus-text" type="text" name="text" rows="4" placeholder="В свободной форме"></textarea></p>
-  		<input class="button" type="submit" value="Отправить">
+  		<p class="writeus-item"><label for="writeus-name">Ваше имя:</label><br>
+  		<input id="writeus-name" type="text" name="name" placeholder="Имя Фамилия" required></p>
+  		<p class="writeus-item"><label for="writeus-email">Ваш e-mail:</label><br>
+  		<input id="writeus-email" type="email" name="email" placeholder="email@example.com" required></p>
+  		<p class="writeus-item"><label for="writeus-text">Текст письма:</label><br>
+  		<textarea id="writeus-text" type="text" name="text" rows="4" placeholder="В свободной форме" required></textarea></p>
+  		<button class="button" type="submit">Отправить</button>
   	</form>
   		<button class="modal-close" type="button">
           Закрыть
@@ -133,7 +148,7 @@
           Как до нас добраться
         </h2>
         <p>
-          <img src="img/map-big.jpg" width="960" height="559" alt="Магазин находится по адресу ул. Строителей, 15, Москва">
+          <img class="bigmap" src="img/map-big.jpg" width="960" height="559" alt="Магазин находится по адресу ул. Строителей, 15, Москва">
         </p>
         <button class="modal-close" type="button">
           Закрыть
