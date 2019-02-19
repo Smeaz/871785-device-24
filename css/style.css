@@ -9,7 +9,7 @@ body {
 	line-height: 30px;
 	font-weight: 300;
 	color: #464646;
-	/*background: url(../img/device-catalog.jpg) no-repeat;*/
+	/*background: url(../img/device-index.jpg) no-repeat;*/
 	background-position: center 0; 
 	background-color: #ffffff;
 }
@@ -195,6 +195,7 @@ ul[class*="navigation"] li {
 	font-weight: 800;
 	color: #000000;
 	margin-top: 70px;
+	margin-bottom: 60px;
 	padding-left: 35px;
 }
 
@@ -232,32 +233,41 @@ ul[class*="navigation"] li {
 
 .map {
 	margin-top: 40px;
+	margin-bottom: 59px;
 }
 
 .sale {
 	display: flex;
 }
 
-.description .button {
-	margin-top: 70px;
-}
-
 .button {
-	display: block;
+	display: inline-block;
 	font-family: "Gilroy", Arial, sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 800;
 	letter-spacing: 3.6px;
 	text-align: center;
 	color: #000000;
-	vertical-align: middle;
+	line-height: inherit;
 	text-transform: uppercase;
 	border: none;
 	background-color: #f0c52e;
 	outline: 0;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	transform: scaleY(0.2);
 }
 
-.button:hover {}
+.button span {
+	display: inline-block;
+	transform: scaleY(5);
+}
+
+.button:hover {
+	cursor: pointer;
+}
 
 .button:focus,
 .button:active {
