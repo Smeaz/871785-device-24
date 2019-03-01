@@ -103,6 +103,19 @@ a {
     background-color: #f7e296;
 }
 
+.catalog-navigation ul {
+	padding: 0;
+	margin-right: 63px;
+}
+
+.catalog-navigation ul:last-child {
+	margin-left: 14px;
+}
+
+.catalog-navigation li {
+	margin-bottom: 5px;
+}
+
 .big-nav-link {
 	font-family: "Gilroy", Arial, sans-serif;
 	font-size: 18px;
@@ -130,20 +143,8 @@ ul[class*="navigation"] li {
 	margin-top: 36px;
 }
 
-.catalog-navigation-menu {
-	padding: 0;
-	margin: 0;
-	display: flex;
-	justify-content: space-between;
-	width: 550px;
-}
-
-.catalog-column li {
-	margin-bottom: 5px;
-}
-
 .header-catalog:hover .catalog-navigation {
-	display: block;
+	display: flex;
 }
 
 .header-delivery {
@@ -509,9 +510,10 @@ ul[class*="navigation"] li {
 	top: 16px;
 	left: 0px;
 	transition: transform 0.15s ease-in-out;
+	z-index: -1;
 }
 
-.button span {
+.button {
 	position: relative;
 	z-index: 2;
 }
@@ -566,6 +568,10 @@ ul[class*="navigation"] li {
 .writeus-item textarea:invalid {
 	background-color: #f6dada;
 	box-shadow: none;
+}
+
+.wrireus-item input:valid {
+	background-color: black;
 }
 
 .writeus-item label {

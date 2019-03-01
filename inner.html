@@ -20,31 +20,28 @@
             <label for="search" class="search-label"></label>
             <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
             <button class="search-btn">Найти</button></form></li>
-          	<li class="login"><a class="current-user header-login-link" href="#">Валентин Петухов</a><button class="leave-btn"><span>Выйти</span></button></li>
+          	<li class="login"><a class="current-user header-login-link" href="#">Валентин Петухов</a><button class="leave-btn">Выйти</button></li>
             <li class="compare"><a class="header-compare-link" href="#">Сравнить</a></li>
             <li class="cart"><a class="header-cart-link" href="#">Корзина</a></li>
         </ul>
         <ul class="header-site-navigation">
-                    <li class="header-catalog"><a class="big-nav-link catalog" href="inner.html"><span>Каталог товаров</span><div class="plus"></div>
-            </a><div class="catalog-navigation">
-            <ul class="catalog-navigation-menu">
-              <div class="catalog-column">
+                    <li class="header-catalog"><a class="big-nav-link catalog" href="inner.html">Каталог товаров<div class="plus"></div></a>
+                      <nav class="catalog-navigation">
+            <ul>
               <li><a href="#">Виртуальная реальность</a></li>
               <li><a href="#">Моноподы для селфи</a></li>
               <li><a href="#">Экшн-камеры</a></li>
-            </div>
-            <div class="catalog-column">
+            </ul>
+            <ul>
               <li><a href="#">Фитнес-браслеты</a></li>
               <li><a href="#">Умные часы</a></li>
-            </div>
-            <div class="catalog-column">
-              <li><a href="#">Квадрокоптеры</a></li>
-            </div>
             </ul>
-          </div></li>
-          <li class="header-delivery"><a class="big-nav-link" href="delivery.html"><span>Доставка</span></a></li>
-          <li><a class="big-nav-link" href="guarantee.html"><span>Гарантия</span></a></li>
-          <li><a class="big-nav-link" href="contacts.html"><span>Контакты</span></a></li>
+            <ul>
+              <li><a href="#">Квадрокоптеры</a></li>
+            </ul></nav>
+          <li class="header-delivery"><a class="big-nav-link" href="delivery.html">Доставка</a></li>
+          <li><a class="big-nav-link" href="guarantee.html">Гарантия</a></li>
+          <li><a class="big-nav-link" href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
   </header>
@@ -102,7 +99,7 @@
               </li>
             </ul>
           </fieldset>
-          <button class="filter-button button"><span>Показать</span></button>
+          <button type="submit" class="filter-button button">Показать</button>
         </form>
       </section>
       <section class="catalog">
@@ -116,7 +113,7 @@
             <p class="catalog-item-image">
                 <img src="img/item-1.jpg" height="380" width="360" alt="Любительская селфи-палка">
                 <div class="add-to-cart"><div class="add-to-cart-backgrnd"></div>
-                <button class="button"><span>В корзину</span></button>
+                <button class="button">В корзину</button>
                 <a href="#">Добавить к сравнению</a></div>
                 <span class="catalog-item-new">NEW</span>
             </p>
@@ -129,7 +126,7 @@
             <p class="catalog-item-image">
                 <img src="img/item-2.jpg" height="380" width="360" alt="Профессиональная селфи-палка">
                 <div class="add-to-cart"><div class="add-to-cart-backgrnd"></div>
-                <button class="button"><span>В корзину</span></button>
+                <button class="button">В корзину</button>
                 <a href="#">Добавить к сравнению</a></div>
                 <span class="catalog-item-new">NEW</span>
             </p>
@@ -142,7 +139,7 @@
             <p class="catalog-item-image">
                 <img src="img/item-3.jpg" height="380" width="360" alt="Непотопляемая селфи-палка">
                 <div class="add-to-cart"><div class="add-to-cart-backgrnd"></div>
-                <button class="button"><span>В корзину</span></button>
+                <button class="button">В корзину</button>
                 <a href="#">Добавить к сравнению</a></div>
                 <span class="catalog-item-new">NEW</span>
             </p>
@@ -155,7 +152,7 @@
             <p class="catalog-item-image">
                 <img src="img/item-4.jpg" height="380" width="360" alt="Селфи-палка «Следуй за мной»">
                 <div class="add-to-cart"><div class="add-to-cart-backgrnd"></div>
-                <button class="button"><span>В корзину</span></button>
+                <button class="button">В корзину</button>
                 <a href="#">Добавить к сравнению</a></div>
                 <span class="catalog-item-new visible">NEW</span>
             </p>
@@ -176,9 +173,9 @@
 </svg>
         </a>
         <ul class="footer-user-navigation">
-            <li class="footer login-link"><a class="footer-login-link current-user" href="#"><div class="login-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#ffc600" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg></div><span>Валентин Петухов</span></a><button class="leave-btn">Выйти</button></li>
-            <li class="footer compare-link"><a class="footer-compare-link" href="#"><div class="compare-icon"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path fill="#ffc600" d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg></div><span>Сравнить</span></a></li>
-            <li class="footer basket-link"><a class="footer-cart-link" href="#"><div class="cart-icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="#ffc600" d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path fill="#ffc600" d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg></div><span>Корзина</span></a></li>
+            <li class="footer login-link"><a class="footer-login-link current-user" href="#"><div class="login-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#ffc600" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg></div>Валентин Петухов</a><button class="leave-btn">Выйти</button></li>
+            <li class="footer compare-link"><a class="footer-compare-link" href="#"><div class="compare-icon"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path fill="#ffc600" d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg></div>Сравнить</a></li>
+            <li class="footer basket-link"><a class="footer-cart-link" href="#"><div class="cart-icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="#ffc600" d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path fill="#ffc600" d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg></div>Корзина</a></li>
         </ul></div>
         <div class="nav-2row">
         <p class="contact-info">г. Москва, ул. Строителей, 15</p>
