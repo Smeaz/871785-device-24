@@ -172,7 +172,7 @@ ul[class*="navigation"] li {
 	margin-left: auto;
 }
 
-.catalog::after {
+.catalog-link::after {
 	content: "";
 	display: inline-block;
 	position: absolute;
