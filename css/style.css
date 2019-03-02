@@ -18,7 +18,7 @@ body {
 
 .inner-page {
 	/*background: url(../img/device-catalog.jpg) no-repeat;*/
-	/*background: url(../img/device-catalog-modals.jpg) no-repeat;*/
+	/*background: url(../img/device-catalog-modals.jpg) no-repeat;*/	
 	background-position: center 0;
 }
 
@@ -495,6 +495,10 @@ ul[class*="navigation"] li {
 	margin-top: -280px;
 }
 
+iframe {
+	border: none;
+}
+
 .modal-close:hover {
 	opacity: 1;
 }
@@ -623,7 +627,7 @@ ul[class*="navigation"] li {
 }
 
 .nav-2row {
-	margin-top: 6px;
+	margin-top: 5px;
 }
 
 .footer-site-navigation a {
@@ -1014,7 +1018,7 @@ fieldset .filter-options {
 	width: 760px;
 	margin: 0;
 	margin-left: 71px;
-	margin-top: 33px;
+	margin-top: 30px;
 	padding: 0;
 	justify-content: space-between;
 }
@@ -1023,7 +1027,7 @@ fieldset .filter-options {
 	display: flex;
 	flex-wrap: wrap;
 	width: 360px;
-	margin-top: 36px;
+	margin-top: 38px;
 	justify-content: space-between;
 	align-content: flex-start;
 	position: relative;
@@ -1031,11 +1035,14 @@ fieldset .filter-options {
 
 .catalog-item h3 {
 	margin: 0;
-	width: 275px;
+	width: 260px;
+	overflow: hidden;
 }
 
-.catalog-item p {
+.catalog-item-price {
 	margin: 0;
+	padding-top: 1px;
+	overflow: hidden;
 }
 
 .catalog-item-image {
@@ -1073,6 +1080,7 @@ fieldset .filter-options {
 
 .add-to-cart {
 	position: absolute;
+	top: 0;
 	width: 360px;
 	height: 380px;
 	display: flex;
@@ -1126,7 +1134,6 @@ fieldset .filter-options {
 	font-family: "Gilroy", Arial, sans-serif;
 	font-size: 18px;
 	line-height: 1.33;
-	letter-spacing: 0.2px;
 	color: #000000;
 }
 
@@ -1140,7 +1147,7 @@ fieldset .filter-options {
 	background-color: #F2A4A4;
 	width: 832px;
 	height: 149px;
-	margin-top: 26px;
+	margin-top: 25px;
 }
 
 .price-value {
