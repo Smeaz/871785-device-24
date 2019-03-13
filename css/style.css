@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: Open Sans, Arial, sans-serif;
 	font-size: 15px;
 	line-height: 30px;
 	font-weight: 300;
@@ -12,6 +12,8 @@ body {
 .index-page {
 	/*background: url(../img/device-index.jpg) no-repeat;*/
 	/*background: url(../img/device-index-modals.jpg) no-repeat;*/
+	/*background: url(../img/device-index-modals-slide2.jpg) no-repeat;*/
+	/*background: url(../img/device-index-modals-slide3.jpg) no-repeat;*/
 	background-position: center 0;
 }
 
@@ -22,7 +24,7 @@ body {
 }
 
 @font-face {
-    font-family: "Gilroy";
+    font-family: "Gilroy-Light";
     src: url(../font/gilroylight.woff2) format("woff2"),
     url(../font/gilroylight.woff) format("woff");
 }
@@ -78,6 +80,19 @@ a {
 	color: #ffffff;
 	background-color: rgba(240, 197, 46, 0.5);
 	width: 1040px;
+	min-height: 299px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+.inner-navigation {
+	position: relative;
+	color: #ffffff;
+	background-color: rgba(240, 197, 46, 0.5);
+	width: 1040px;
 	min-height: 186px;
 	margin-left: auto;
 	margin-right: auto;
@@ -93,13 +108,14 @@ a {
 	flex-wrap: wrap;
 	align-content: flex-start;
 	width: 1040px;
-    height: 135px;
+    height: 138px;
     top: 24px;
     left: -60px;
     padding-top: 28px;
     padding-left: 60px;
 	padding-right: 60px;
     background-color: #f7e296;
+    z-index: 3;
 }
 
 .catalog-navigation li {
@@ -113,7 +129,7 @@ a {
 }
 
 .big-nav-link {
-	font-family: "Gilroy", Arial, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-size: 18px;
 	letter-spacing: 3.6px;
 	text-transform: uppercase;
@@ -343,9 +359,146 @@ ul[class*="navigation"] li {
 	margin-left: 3px;
 }
 
+.slider {
+	display:flex;
+	justify-content: space-between;
+	position: relative;
+	top: -111px;
+	z-index: 2;
+}
+
+.slider-1 {
+	padding-left: 91px;
+	padding-right: 86px;
+}
+
+.slider-2 {
+	padding-left: 116px;
+	padding-right: 110px;
+}
+
+.slider-3 {
+	padding-left: 31px;
+	padding-right: 36px;
+}
+
+.slider-2 img {
+	margin-top: 12px;
+}
+
+.slider-3 img {
+	margin-top: 65px;
+}
+
+.slider:before {
+	display: block;
+	position: absolute;
+	right: 460px;
+	top: 37px;
+	content: "";
+	width: 100px;
+	height: 7px;
+	background-color: #ffffff;
+}
+
+.slider-1 .slider-description {
+	width: 475px;
+}
+
+.slider-2 .slider-description {
+	width: 451px;
+}
+
+.slider-3 .slider-description {
+	width: 525px;
+}
+
+.slider-1 .slider-description:before {
+	display: block;
+	position: absolute;
+	font-family: Gilroy, Arial, sans-serif;
+	font-size: 179px;
+	right: 65px;
+	top: 61px;
+	content: "01";
+	width: 166px;
+	height: 131px;
+	color: #ffffff;
+	z-index: -1;
+}
+
+.slider-2 .slider-description:before {
+	display: block;
+	position: absolute;
+	font-family: Gilroy, Arial, sans-serif;
+	font-size: 179px;
+	right: 90px;
+	top: 61px;
+	content: "02";
+	width: 166px;
+	height: 131px;
+	color: #ffffff;
+	z-index: -1;
+}
+
+.slider-3 .slider-description:before {
+	display: block;
+	position: absolute;
+	font-family: Gilroy, Arial, sans-serif;
+	font-size: 179px;
+	right: 92px;
+	top: 61px;
+	content: "03";
+	width: 166px;
+	height: 131px;
+	color: #ffffff;
+	z-index: -1;
+}
+
+.slider h2 {
+	margin-bottom: 19px;
+	margin-top: 79px;
+	font-family: Gilroy, Arial, sans-serif;
+	font-size: 47px;
+	color: #000000;
+	line-height: 1.19;
+	z-index: 3;
+}
+
+.slider p {
+	margin: 0;
+	margin-bottom: 43px;
+}
+
+.slider .button {
+	width: 220px;
+}
+
+.slider table {
+	text-align: left;
+	width: 450px;
+	margin-top: 57px;
+}
+
+.slider th {
+	padding: 0;
+	font-family: Gilroy-Light, Arial, sans-serif;
+  	font-size: 36px;
+  	font-weight: 300;
+  	color: #000000;
+  	font-style: normal;
+  	font-stretch: normal;
+}
+
+.slider td {
+	padding: 0;
+	padding-top: 9px;
+	font-size: 13px;
+}
+
 .delivery-companies {
 	list-style: none;
-	font-family: "Gilroy", Arial, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-size: 16px;
 	color: #000000;
 	margin-top: 73px;
@@ -390,7 +543,7 @@ ul[class*="navigation"] li {
 
 .about h2,
 .contacts h2 {
-	font-family: "Gilroy", Arial, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-size: 47px;
 	color: #000000;
 	margin-bottom: 51px;
@@ -420,7 +573,7 @@ ul[class*="navigation"] li {
 .button {
 	display: block;
 	position: relative;
-	font-family: "Gilroy", Arial, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-size: 18px;
 	letter-spacing: 3.6px;
 	text-align: center;
@@ -579,7 +732,7 @@ ul[class*="navigation"] li {
 }
 
 .writeus-item label {
-	font-family: "Gilroy", Arial, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-size: 18px;
 	font-weight: 800;
 	color: #000000;
@@ -760,7 +913,7 @@ ul[class*="navigation"] li {
 }
 
 .modal h2 {
-	font-family: "Gilroy", Arial, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-size: 47px;
 	font-weight: 800;
 	color: #000000;
@@ -806,7 +959,7 @@ ul[class*="navigation"] li {
 .page-title {
 	margin: 0;
 	margin-top: 46px;
-	font-family: "Gilroy", Arial, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-size: 47px;
 	color: #000000;
 }
@@ -960,7 +1113,7 @@ ul[class*="navigation"] li {
 }
 
 .filter legend {
-	font-family: "Gilroy", Arial, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-size: 18px;
 	font-weight: 800;
 }
@@ -1027,12 +1180,6 @@ fieldset .filter-options {
 	overflow: hidden;
 }
 
-.catalog-item-price {
-	margin: 0;
-	padding-top: 1px;
-	overflow: hidden;
-}
-
 .catalog-item-image {
 	padding-bottom: 28px;
 	order: -1;
@@ -1050,7 +1197,7 @@ fieldset .filter-options {
 	justify-content: center;
 	align-items: center;
 	color: rgba(0, 0, 0, 0.2);
-	font-family: Gilroy;
+	font-family: Gilroy, Arial, sans-serif;
 	font-size: 14px;
 	letter-spacing: 0.7px;
 	width: 58px;
@@ -1106,16 +1253,19 @@ fieldset .filter-options {
 }
 
 .catalog-item-title a {
-	font-family: "Gilroy", Arial, sans-serif;
+	font-family: Gilroy, Arial, sans-serif;
 	font-size: 18px;
 	line-height: 1.33;
 	color: #000000;
 }
 
 .catalog-item-price {
-	font-family: "Gilroy", Arial, sans-serif;
+	font-family: Gilroy-Light, Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 300;
+	margin: 0;
+	padding-top: 1px;
+	overflow: hidden;
 }
 
 .page-navigation {
