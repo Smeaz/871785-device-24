@@ -109,9 +109,9 @@ a {
 	align-content: flex-start;
 	width: 1040px;
     height: 138px;
-    top: 24px;
+    top: 25px;
     left: -60px;
-    padding-top: 28px;
+    padding-top: 27px;
     padding-left: 60px;
 	padding-right: 60px;
     background-color: #f7e296;
@@ -359,12 +359,60 @@ ul[class*="navigation"] li {
 	margin-left: 3px;
 }
 
-.slider {
+.slider-inner {
 	display:flex;
 	justify-content: space-between;
 	position: relative;
-	top: -111px;
 	z-index: 2;
+	margin-bottom: 50px;
+}
+
+.slider {
+	height: 500px;
+	overflow: hidden;
+	position: relative;
+	top: -111px;
+}
+
+.slider input[type="radio"] {
+	display: none;
+}
+
+.slider-controls {
+	position: absolute;
+	top: 318px;
+	right: 94px;
+	z-index: 3;
+}
+
+.slider-controls label {
+	display: inline-block;
+	margin: 0 8px;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background: url(../img/slider-button-empty.svg) no-repeat;
+	background-size: 13px 13px;
+	cursor: pointer;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+  	background: url(../img/slider-button.svg) no-repeat;
+  	background-size: 13px 13px;
+}
+
+#btn-1:checked ~ .slider-slides {
+  transform: translateY(0);
+}
+
+#btn-2:checked ~ .slider-slides {
+  transform: translateY(-536px);
+}
+
+#btn-3:checked ~ .slider-slides {
+  transform: translateY(-1083px);
 }
 
 .slider-1 {
@@ -390,7 +438,7 @@ ul[class*="navigation"] li {
 	margin-top: 65px;
 }
 
-.slider:before {
+.slider-inner:before {
 	display: block;
 	position: absolute;
 	right: 460px;
@@ -455,7 +503,7 @@ ul[class*="navigation"] li {
 	z-index: -1;
 }
 
-.slider h2 {
+.slider-inner h2 {
 	margin-bottom: 19px;
 	margin-top: 79px;
 	font-family: Gilroy, Arial, sans-serif;
@@ -465,22 +513,22 @@ ul[class*="navigation"] li {
 	z-index: 3;
 }
 
-.slider p {
+.slider-inner p {
 	margin: 0;
 	margin-bottom: 43px;
 }
 
-.slider .button {
+.slider-inner .button {
 	width: 220px;
 }
 
-.slider table {
+.slider-inner table {
 	text-align: left;
 	width: 450px;
 	margin-top: 57px;
 }
 
-.slider th {
+.slider-inner th {
 	padding: 0;
 	font-family: Gilroy-Light, Arial, sans-serif;
   	font-size: 36px;
@@ -490,10 +538,106 @@ ul[class*="navigation"] li {
   	font-stretch: normal;
 }
 
-.slider td {
+.slider-inner td {
 	padding: 0;
 	padding-top: 9px;
 	font-size: 13px;
+}
+
+.popular-items {
+	display: flex;
+	justify-content: space-between;
+}
+
+.popular-item {
+	position: relative;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+	width: 163px;
+}
+
+.popular-item:hover .popular-item-backgrnd,
+.popular-item:focus .popular-item-backgrnd {
+	opacity: 1;
+}
+
+.popular-item:focus .popular-item-image {
+	opacity: 0.3;
+}
+
+.popular-item:focus h3 {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.popular-item-backgrnd {
+	width: 160px;
+	height: 160px;
+	background-color: #f0c52e;
+	opacity: 0.5;
+	margin-bottom: 20px;
+}
+
+.popular-1 {
+	position: absolute;
+	width: 160px;
+	height: 160px;
+	background-image: url(../img/popular-1.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.popular-2 {
+	position: absolute;
+	top: 22px;
+	width: 160px;
+	height: 160px;
+	background-image: url(../img/popular-2.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.popular-3 {
+	position: absolute;
+	width: 160px;
+	height: 160px;
+	background-image: url(../img/popular-3.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.popular-4 {
+	position: absolute;
+	width: 160px;
+	height: 160px;
+	background-image: url(../img/popular-4.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.popular-5 {
+	position: absolute;
+	width: 160px;
+	height: 160px;
+	background-image: url(../img/popular-5.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.popular-6 {
+	position: absolute;
+	width: 160px;
+	height: 160px;
+	background-image: url(../img/popular-6.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.popular-item h3 {
+	font-family: Gilroy, Arial, sans-serif;
+	font-size: 18px;
+	color: #000000;
+	line-height: 1.33;
 }
 
 .delivery-companies {
