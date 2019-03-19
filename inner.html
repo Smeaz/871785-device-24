@@ -45,21 +45,31 @@
     <div class="catalog-container">
     <h1 class="page-title">Моноподы для селфи</h1>
     <ul class="breadcrumbs">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="#">Каталог товаров</a></li>
-        <li class="breadcrumbs-current">Моноподы для селфи</li>
+        <li class="breadcrumb"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb"><a href="#">Каталог товаров</a></li>
+        <li class="breadcrumb-current"><a>Моноподы для селфи</a></li>
       </ul>
     </div>
       <div class="sale">
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <div class="filter-header"><span>Фильтр:</span></div>
+        <div class="filter-header">Фильтр:</div>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <fieldset class="price-value">
             <legend>Стоимость</legend>
-            <input type="range" min="0" max="10000" step="1" value="5000">
+              <div class="range-controls">
+                <div class="scale"><div class="bar"></div></div>
+                <div class="toggle min-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23"><path opacity=".3" fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z"/><circle fill="#FFF" cx="10" cy="10" r="10"/><circle fill="#ABABAB" cx="10" cy="10" r="2"/></svg></div>
+                <div class="toggle max-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23"><path opacity=".3" fill="#ABABAB" d="M10 20C4.477 20 0 15.522 0 10v2c0 5.522 4.477 10 10 10 5.522 0 10-4.478 10-10v-2c0 5.522-4.478 10-10 10z"/><circle fill="#FFF" cx="10" cy="10" r="10"/><circle fill="#ABABAB" cx="10" cy="10" r="2"/></svg></div>
+              </div>
+                <div class="price-controls">
+                  <label for="min-price-value">от</label>
+                  <input class="min-price" type="text" id="min-price-value" value="0">
+                  <label for="max-price-value">до</label>
+                  <input class="max-price" type="text" id="max-price-value" value="5000">
+                </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="color-option">
             <legend>Цвет</legend>
             <ul class="filter-options">
               <li class="filter-option">
@@ -84,7 +94,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="bluetooth-option">
             <legend>Bluetooth</legend>
             <ul class="filter-options">
               <li class="filter-option">
@@ -102,7 +112,41 @@
       </section>
       <section class="catalog">
         <h2 class="visually-hidden">Список моноподов для селфи</h2>
-        <div class="sort"><span>Сортировка:</span></div>
+        <form class="sort">
+          <span>Сортировка:</span>
+          <fieldset>
+          <ul class="sort-options">
+            <li>
+              <input class="visually-hidden sort-checkbox" type="radio" name="type-of-sort" value="price" id="price-sort" checked>
+              <label for="price-sort">По цене</label>
+            </li>
+            <li>
+              <input class="visually-hidden sort-checkbox" type="radio" name="type-of-sort" value="type" id="type-sort">
+              <label for="type-sort">По типу</label>
+            </li>
+            <li>
+              <input class="visually-hidden sort-checkbox" type="radio" name="type-of-sort" value="popularity" id="popularity-sort">
+              <label for="popularity-sort">По популярности</label>
+            </li>
+          </ul>
+          </fieldset>
+          <fieldset>
+            <ul class="sort-direction">
+              <li>
+                <input class="visually-hidden sort-direction-checkbox" type="radio" name="direction-of-sort" value="low-to-high" id="low-to-high-sort">
+                <label for="low-to-high-sort">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
+                </label>
+              </li>
+              <li>
+                <input class="visually-hidden sort-direction-checkbox" type="radio" name="direction-of-sort" value="high-to-low" id="high-to-low-sort" checked>
+                <label for="high-to-low-sort">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </form>
         <ul class="catalog-list">
           <li class="catalog-item">
             <h3 class="catalog-item-title">
@@ -160,7 +204,15 @@
             <p class="catalog-item-price">4 900 руб.</p>
           </li>
         </ul>
-        <!-- Красная зона --><div class="page-navigation"></div>
+        <div class="paginator">
+          <a href="">Назад</a>
+          <ul class="pages">
+            <li class="page-current"><a>1</a></li>
+            <li class="page"><a href="">2</a></li>
+            <li class="page"><a href="">3</a></li>
+          </ul>
+          <a href="">Вперед</a>
+        </div>
       </section>
       </div>
   </main>

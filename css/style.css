@@ -539,12 +539,14 @@ ul[class*="navigation"] li {
   	color: #000000;
   	font-style: normal;
   	font-stretch: normal;
+  	text-align: left;
 }
 
 .slider-inner td {
 	padding: 0;
 	padding-top: 9px;
 	font-size: 13px;
+	text-align: left;
 }
 
 .popular-items {
@@ -898,7 +900,6 @@ ul[class*="navigation"] li {
 }
 
 .modal-write-us {
-	display: none;
 	padding-left: 100px;
 	padding-right: 100px;
 	padding-top: 91px;
@@ -1007,6 +1008,7 @@ ul[class*="navigation"] li {
 	box-sizing: border-box;
 	margin-top: 3px;
 	padding-left: 18px;
+	box-shadow: none;
 }
 
 .writeus-item textarea {
@@ -1025,10 +1027,9 @@ ul[class*="navigation"] li {
 	color: #464646;
 }
 
-.writeus-item input:invalid,
-.writeus-item textarea:invalid {
+.writeus-item input:invalid:not(:placeholder-shown),
+.writeus-item textarea:invalid:not(:placeholder-shown) {
 	background-color: #f6dada;
-	box-shadow: none;
 }
 
 .wrireus-item input:valid {
@@ -1290,7 +1291,7 @@ ul[class*="navigation"] li {
 	position: relative;
 }
 
-.breadcrumbs li::after {
+.breadcrumb::after {
 	position: absolute;
 	content: "";
 	width: 4px;
@@ -1300,20 +1301,15 @@ ul[class*="navigation"] li {
 	background: url(../img/nav-arrow.svg) no-repeat;
 }
 
-.breadcrumbs-current::after {
-  display: none;
-}
-
-.breadcrumbs a,
-.breadcrumbs-current {
+.breadcrumbs a {
 	color: rgba(0, 0, 0, 0.3);
 }
 
-.breadcrumbs a:hover {
+.breadcrumb a:hover {
 	color: rgba(0, 0, 0, 0.6)
 }
 
-.breadcrumbs a:focus {
+.breadcrumb a:focus {
 	color: rgba(0, 0, 0, 0.1)
 }
 
@@ -1333,20 +1329,22 @@ ul[class*="navigation"] li {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	padding-left: 59px;
+	padding-left: 28px;
 }
 
 .filter-header {
-	height: 71px;
+	height: 70px;
 	background-color: #d9d9d9;
-	margin-bottom: 67px;
+	margin-bottom: 78px;
 	display: flex;
 	flex-direction: row-reverse;
 	align-items: center;
+	padding-right: 182px;
 }
 
-.filter-header span,
-.sort span {
+.filter-header,
+.sort span,
+.paginator a {
 	text-transform: uppercase;
 	color: #000000;
 	font-family: Gilroy, Arial, sans-serif;
@@ -1354,8 +1352,10 @@ ul[class*="navigation"] li {
 	letter-spacing: 3.2px;
 }
 
-.filter-header span {
-	width: 270px;
+.sort-options {
+	font-size: 14px;
+	font-weight: normal;
+	color: rgba(0, 0, 0, 0.3);
 }
 
 .filter legend {
@@ -1365,7 +1365,7 @@ ul[class*="navigation"] li {
 .filter legend::before {
 	content: "";
 	display: block;
-	width: 201px;
+	width: 202px;
 	height: 2px;
 	background-color: black;
 	position: absolute;
@@ -1420,19 +1420,76 @@ ul[class*="navigation"] li {
 }
 
 .sort {
-	height: 71px;
+	height: 70px;
 	background-color: #ebebeb;
 	display: flex;
 	align-items: center;
 	padding-left: 71px;
 }
 
+.sort fieldset {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.sort legend {
+	position: relative;
+}
+
+.sort-options {
+	display: flex;
+	margin: 0;
+	margin-left: 27px;
+	padding: 0;
+	list-style: none;
+}
+
+.sort-options label {
+	cursor: pointer;
+	margin-left: 30px;
+}
+
+.sort-options label:hover {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.sort-checkbox:checked + label {
+	color: #000000;
+}
+
+.sort-direction {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	margin-left: 209px;
+	list-style: none;
+}
+
+.sort-direction label {
+	cursor: pointer;
+	opacity: 0.2;
+	margin-left: 20px;
+}
+
+.sort-direction label:hover {
+	opacity: 0.4;
+}
+
+.sort-direction-checkbox:checked + label {
+	opacity: 1;
+}
+
 .filter fieldset {
 	margin: 0;
 	padding: 0;
 	border: none;
-	width: 270px;
-	margin-bottom: 41px;
+}
+
+.price-value input[type="range"] {
+	width: 200px;
+	margin-top: 22px;
 }
 
 .filter legend {
@@ -1591,19 +1648,167 @@ fieldset .filter-options {
 	overflow: hidden;
 }
 
-.page-navigation {
-	background-color: #F2A4A4;
-	width: 832px;
-	height: 151px;
-	margin-top: 25px;
+.paginator {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #ebebeb;
+	width: 760px;
+	height: 70px;
+	margin-top: 28px;
+	margin-left: 72px;
+	margin-bottom: 77px;
 }
 
-.price-value {
-	margin-bottom: 0;
+.paginator > a {
+	min-width: 136px;
+	height: 70px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 70px;
+}
+
+.paginator > a:hover {
+	background-color: #d9d9d9;
+}
+
+.paginator > a:focus {
+	color: rgba(0, 0, 0, 0.3);
+	background-color: #d9d9d9;
+}
+
+.pages {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	width: 400px;
+}
+
+.pages li {
+	padding-left: 10px;
+	padding-right: 8px;
+}
+
+.pages a {
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+	height: 30px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.page a {
+	opacity: 0.3;
+}
+
+.page a:hover,
+.page a:focus {
+	opacity: 0.6;
+}
+
+.page a:active {
+	opacity: 1;
+}
+
+.filter .price-value {
+	margin-bottom: 30px;
 	height: 110px;
+	width: 300px;
 }
 
-.red {
-	height: 1591px;
-	background-color: #F2A4A4;
+.price-value legend {
+	padding-left: 30px;
+}
+
+.filter .color-option {
+	margin-bottom: 40px;
+	padding-left: 30px;
+	width: 270px;
+}
+
+.filter .bluetooth-option {
+	margin-bottom: 41px;
+	padding-left: 30px;
+	width: 270px;
+}
+
+.range-filter {
+    padding-top: 10px;
+    width: 240px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.range-controls {
+    position: relative;
+    height: 80px;
+    padding-right: 68px;
+    overflow: hidden;
+}
+
+.bar,
+.scale {
+    margin-top: 32px;
+    margin-left: 30px;
+    height: 2px;
+    background: #dbdbdb;
+}
+
+.bar {
+	margin-left: 8px;
+	width: 110px;
+    height: 2px;
+    background: #91c92f;
+}
+
+.toggle {
+    position: absolute;
+    top: 22px;
+    left: 30px;
+    width: 20px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.toggle:active {
+	transform: scale(1.1);
+}
+
+.min-toggle {
+    left: 26px ;
+}
+
+.max-toggle {
+    left: 139px;
+}
+
+.price-value input[type="text"] {
+	height: 24px;
+    width: 53px;
+    padding: 0;
+    margin-left: 2px;
+    border: none;
+    text-align: left;
+    background-color: transparent;
+}
+
+.price-controls {
+	position: relative;
+	top: -37px;
+	margin-left: 30px;
+}
+
+.price-controls,
+.price-value input[type="text"] {
+	font-family: Gilroy-Light, Arial, sans-serif;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.2);
+	line-height: 1.71;
+}
+
+.min-price {
+    margin-right: 14px;
 }
