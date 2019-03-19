@@ -900,6 +900,7 @@ ul[class*="navigation"] li {
 }
 
 .modal-write-us {
+	display: none;
 	padding-left: 100px;
 	padding-right: 100px;
 	padding-top: 91px;
