@@ -717,6 +717,22 @@ ul[class*="navigation"] li {
 	letter-spacing: 0.2px;
 }
 
+.slide-1 th:nth-child(1) {
+	width: 35%;
+}
+
+.slide-1 th:nth-child(2) {
+	width: 31%;
+}
+
+.slide-3 th:nth-child(1) {
+	width: 35%;
+}
+
+.slide-3 p {
+	width: 455px;
+}
+
 .service-slide-1,
 .service-slide-2,
 .service-slide-3 {
