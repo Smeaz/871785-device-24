@@ -383,7 +383,7 @@ ul[class*="navigation"] li {
 
 .slider-controls {
 	position: absolute;
-	top: 318px;
+	top: 316px;
 	right: 94px;
 	z-index: 3;
 }
@@ -397,6 +397,7 @@ ul[class*="navigation"] li {
 	background: url(../img/slider-button-empty.svg) no-repeat;
 	background-size: 13px 13px;
 	cursor: pointer;
+	vertical-align: middle;
 }
 
 #btn-1:checked ~ .slider-controls label[for="btn-1"],
@@ -555,95 +556,82 @@ ul[class*="navigation"] li {
 	margin-top: -19px;
 }
 
-.popular-item {
+.popular-item-link:before {
+	content: "";
+	display: block;
 	position: relative;
-	display: flex;
-	flex-direction: column-reverse;
-	justify-content: flex-end;
-	width: 160px;
-}
-
-.popular-item:hover .popular-item-backgrnd,
-.popular-item:focus .popular-item-backgrnd {
-	opacity: 1;
-}
-
-.popular-item:focus .popular-item-image {
-	opacity: 0.3;
-}
-
-.popular-item:focus h3 {
-	color: rgba(0, 0, 0, 0.3);
-}
-
-.popular-item-backgrnd {
 	width: 160px;
 	height: 160px;
 	background-color: #f0c52e;
 	opacity: 0.5;
-	margin-bottom: 33px;
 }
 
-.popular-1 {
+.popular-item-link:after {
+	content: "";
 	position: absolute;
+	top: 0;
 	width: 160px;
 	height: 160px;
-	background-image: url(../img/popular-1.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
-.popular-2 {
-	position: absolute;
-	width: 160px;
-	height: 160px;
+.virtual-reality:after {
+	background-image: url(../img/popular-1.svg);
+}
+
+.monopodes-for-selfie:after {
 	background-image: url(../img/popular-2.svg);
-	background-repeat: no-repeat;
 	background-position: center 100%;
 }
 
-.popular-3 {
-	position: absolute;
-	width: 160px;
-	height: 160px;
+.action-cameras:after {
 	background-image: url(../img/popular-3.svg);
-	background-repeat: no-repeat;
 	background-position: 55% 52%;
 }
 
-.popular-4 {
-	position: absolute;
-	width: 160px;
-	height: 160px;
+.fitness-bracelets:after {
 	background-image: url(../img/popular-4.svg);
-	background-repeat: no-repeat;
 	background-position: 54% 52%;
 }
 
-.popular-5 {
-	position: absolute;
-	width: 160px;
-	height: 160px;
+.smartwatch:after {
 	background-image: url(../img/popular-5.svg);
-	background-repeat: no-repeat;
 	background-position: 53% 51%;
 }
 
-.popular-6 {
-	position: absolute;
-	width: 160px;
-	height: 160px;
+.quadcopters:after {
 	background-image: url(../img/popular-6.svg);
-	background-repeat: no-repeat;
 	background-position: center 54%;
+}
+
+.popular-item-link {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.popular-item {
+	width: 160px;
 }
 
 .popular-item h3 {
 	margin: 0;
+	margin-top: 33px;
 	font-family: Gilroy, Arial, sans-serif;
 	font-size: 18px;
 	color: #000000;
 	line-height: 1.33;
+}
+
+.popular-item-link:hover:before,
+.popular-item-link:active:before {
+	opacity: 1;
+}
+
+.popular-item-link:active:after,
+.popular-item-link:active h3 {
+	opacity: 0.3;
 }
 
 .service {
@@ -1012,6 +1000,11 @@ ul[class*="navigation"] li {
 
 .button:focus::before {
 	background-color: transparent;
+}
+
+.writeus-item {
+	display: flex;
+	flex-direction: column;
 }
 
 .writeus-item input,
@@ -1472,6 +1465,7 @@ ul[class*="navigation"] li {
 	color: rgba(0, 0, 0, 0.6);
 }
 
+.sort-checkbox:active + label,
 .sort-checkbox:checked + label {
 	color: #000000;
 }
@@ -1494,6 +1488,7 @@ ul[class*="navigation"] li {
 	opacity: 0.4;
 }
 
+.sort-direction-checkbox:active + label,
 .sort-direction-checkbox:checked + label {
 	opacity: 1;
 }

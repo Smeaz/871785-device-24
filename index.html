@@ -5,7 +5,7 @@
     <title>Девайс</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/ministyle.css" rel="stylesheet">
   </head>
   <body class="index-page">
   	<header class="main-header">
@@ -90,7 +90,7 @@
         <div class="slider-inner slide-3">
       <img src="img/slider-3.png" alt="Квадрокомарик" width="526" height="334">
       <div class="slider-description">
-      <h2>Порхает как бабочка,<br>жалит как пчела!</h2>
+      <h2>Порхает как бабочка, жалит как пчела!</h2>
       <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
       <a class="button" href="#">Подробнее</a>
       <table>
@@ -108,36 +108,36 @@
       </div>
     </section>
     <section class="popular-items container">
-    <a href="#" class="popular-item">
-      <h3>Виртуальная реальность</h3>
-      <div class="popular-item-backgrnd"></div>
-      <div class="popular-item-image popular-1"></div>
-    </a>
-    <a href="#" class="popular-item">
-      <h3>Моноподы<br>для селфи</h3>
-      <div class="popular-item-backgrnd"></div>
-      <div class="popular-item-image popular-2"></div>
-    </a>
-    <a href="#" class="popular-item">
-      <h3>Экшн-камеры</h3>
-      <div class="popular-item-backgrnd"></div>
-      <div class="popular-item-image popular-3"></div>
-    </a>
-    <a href="#" class="popular-item">
-      <h3>Фитнес-браслеты</h3>
-      <div class="popular-item-backgrnd"></div>
-      <div class="popular-item-image popular-4"></div>
-    </a>
-    <a href="#" class="popular-item">
-      <h3>Умные часы</h3>
-      <div class="popular-item-backgrnd"></div>
-      <div class="popular-item-image popular-5"></div>
-    </a>
-    <a href="#" class="popular-item">
-      <h3>Квадрокоптеры</h3>
-      <div class="popular-item-backgrnd"></div>
-      <div class="popular-item-image popular-6"></div>
-    </a>
+      <div class="popular-item">
+        <a class="popular-item-link virtual-reality" href="">
+          <h3>Виртуальная реальность</h3>
+        </a>
+      </div>
+      <div class="popular-item">
+        <a class="popular-item-link monopodes-for-selfie" href="">
+          <h3>Моноподы для селфи</h3>
+        </a>
+      </div>
+      <div class="popular-item">
+        <a class="popular-item-link action-cameras" href="">
+          <h3>Экшн-камеры</h3>
+        </a>
+      </div>
+      <div class="popular-item">
+        <a class="popular-item-link fitness-bracelets" href="">
+          <h3>Фитнес-браслеты</h3>
+        </a>
+      </div>
+      <div class="popular-item">
+        <a class="popular-item-link smartwatch" href="">
+          <h3>Умные часы</h3>
+        </a>
+      </div>
+      <div class="popular-item">
+        <a class="popular-item-link quadcopters" href="">
+          <h3>Квадрокоптеры</h3>
+        </a>
+      </div>
     </section>
     <section class="service">
     <div class="container">
@@ -235,24 +235,26 @@
   <section class="modal modal-write-us">
   	<h2 class="visually-hidden">Напишите нам</h2>
   	<form class="writeus-form" action="https://echo.htmlacademy.ru" method="post">
-  		<p class="writeus-item"><label for="writeus-name">Ваше имя:</label><br>
-  		<input id="writeus-name" type="text" name="name" required placeholder="Имя Фамилия"></p>
-  		<p class="writeus-item"><label for="writeus-email">Ваш e-mail:</label><br>
-  		<input id="writeus-email" type="email" name="email" required placeholder="email@example.com"></p>
-  		<p class="writeus-item"><label for="writeus-text">Текст письма:</label><br>
-  		<textarea id="writeus-text" name="text" required rows="4" placeholder="В свободной форме"></textarea></p>
+  		<p class="writeus-item">
+        <label for="writeus-name">Ваше имя:</label>
+  		  <input id="writeus-name" type="text" name="name" required placeholder="Имя Фамилия">
+      </p>
+  		<p class="writeus-item">
+        <label for="writeus-email">Ваш e-mail:</label>
+  		  <input id="writeus-email" type="email" name="email" required placeholder="email@example.com">
+      </p>
+  		<p class="writeus-item">
+        <label for="writeus-text">Текст письма:</label>
+  		  <textarea id="writeus-text" name="text" required rows="4" placeholder="В свободной форме"></textarea>
+      </p>
   		<button class="button" type="submit">Отправить</button>
   	</form>
   		<button class="modal-close" type="button">Закрыть</button>
   </section>
-        <section class="modal modal-map">
-        <h2 class="visually-hidden">
-          Как до нас добраться
-        </h2>
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A004511e9bae80185b9b262360808360ad1c1ce06ac9069e3fcf9794bded7ec75&amp;source=constructor" width="960" height="559"></iframe>
-        <button class="modal-close" type="button">
-          Закрыть
-        </button>
-      </section>
+  <section class="modal modal-map">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A004511e9bae80185b9b262360808360ad1c1ce06ac9069e3fcf9794bded7ec75&amp;source=constructor" width="960" height="559"></iframe>
+    <button class="modal-close" type="button">Закрыть</button>
+  </section>
   </body>
 </html>
