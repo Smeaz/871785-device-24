@@ -27,12 +27,14 @@ body {
 
 @font-face {
     font-family: "Gilroy-Light";
+    font-weight: 300;
     src: url(../font/gilroylight.woff2) format("woff2"),
     url(../font/gilroylight.woff) format("woff");
 }
 
 @font-face {
     font-family: "Gilroy";
+    font-weight: 800;
     src: url(../font/gilroyextrabold.woff2) format("woff2"),
     url(../font/gilroyextrabold.woff) format("woff");
 }
@@ -376,6 +378,11 @@ ul[class*="navigation"] li {
 	top: -111px;
 }
 
+.slider-slides {
+	list-style: none;
+	margin: 0;
+}
+
 .slider input[type="radio"],
 .service input[type="radio"] {
 	display: none;
@@ -554,6 +561,7 @@ ul[class*="navigation"] li {
 	display: flex;
 	justify-content: space-between;
 	margin-top: -19px;
+	list-style: none;
 }
 
 .popular-item-link:before {
@@ -687,7 +695,9 @@ ul[class*="navigation"] li {
 
 .service-slides {
 	position: relative;
+	margin: 0;
 	margin-left: 400px;
+	list-style: none;
 }
 
 .service-slides h3 {
@@ -772,8 +782,14 @@ ul[class*="navigation"] li {
 .logotypes {
 	margin-top: 64px;
 	margin-bottom: 93px;
+}
+
+.logotypes ul {
 	display: flex;
 	justify-content: space-between;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .logotype,
@@ -1278,6 +1294,7 @@ ul[class*="navigation"] li {
 	margin-top: 46px;
 	font-family: Gilroy, Arial, sans-serif;
 	font-size: 47px;
+	letter-spacing: 0.5px;
 	color: #000000;
 }
 
@@ -1361,6 +1378,7 @@ ul[class*="navigation"] li {
 	color: #000000;
 	font-family: Gilroy, Arial, sans-serif;
 	font-size: 16px;
+	line-height: 1.5;
 	letter-spacing: 3.2px;
 }
 
@@ -1594,12 +1612,13 @@ fieldset .filter-options {
 	font-family: Gilroy, Arial, sans-serif;
 	font-size: 14px;
 	letter-spacing: 0.7px;
+	line-height: 1.71;
 	width: 58px;
 	height: 58px;
 	border: 2px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
 	position: absolute;
-	left: 273px;
+	right: 28px;
 	top: 28px;
 }
 
@@ -1649,7 +1668,7 @@ fieldset .filter-options {
 .catalog-item-title a {
 	font-family: Gilroy, Arial, sans-serif;
 	font-size: 18px;
-	line-height: 1.33;
+	letter-spacing: 0.2px;
 	color: #000000;
 }
 

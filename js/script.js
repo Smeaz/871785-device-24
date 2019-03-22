@@ -26,6 +26,7 @@ close.addEventListener("click", function (evt) {
 
 form.addEventListener("submit", function (evt) {
     popup.classList.remove("modal-error");
+    popup.classList.remove("modal-show");
   });
 
 submit.addEventListener("click", function (evt) {
@@ -55,8 +56,8 @@ submit.addEventListener("click", function (evt) {
   });
 
     window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
         evt.preventDefault();
-        if (evt.keyCode === 27) {
         if (mapPopup.classList.contains("modal-show")) {
             mapPopup.classList.remove("modal-show");
         }
